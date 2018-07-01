@@ -1,0 +1,25 @@
+﻿@model List<CheeseMVC.Models.CheeseCategory>
+
+<h1>@ViewBag.Title</h1>
+
+<table class="table">
+
+    <tr>
+        <th>Name</th>
+        
+    </tr>
+
+    @foreach (var cheese in Model)
+    {
+        <tr>
+            <td><a asp-controller="Cheese" asp-action="Category" asp-route-id="@cheese.ID">@cheese.Name</a></td>
+        </tr>
+    }
+</table>
+
+@if (Model.Count == 0)
+{
+    <p>No categories yet!</p>
+}
+
+<p><a asp-controller="Category" asp-action="Add">Add Category</a></p>
