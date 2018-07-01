@@ -9,10 +9,10 @@
         
     </tr>
 
-    @foreach (var cheese in Model)
+    @foreach (var category in Model)
     {
         <tr>
-            <td><a asp-controller="Cheese" asp-action="Category" asp-route-id="@cheese.ID">@cheese.Name</a></td>
+            <td><a asp-controller="Cheese" asp-action="Category" asp-route-id="@category.ID">@category.Name</a></td>
         </tr>
     }
 </table>
